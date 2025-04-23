@@ -48,7 +48,6 @@ def insert_book():
     sql_statement = "INSERT INTO books (book_name, year_of_book, book_desc) VALUES (%s, %s, %s);"
     data = (new_book["book_name"], new_book["year_of_book"], new_book["book_desc"])
 
-    # Assuming you have a cursor object named 'cursor'
     cursor.execute(sql_statement, data)
     results = conn.commit()
     return jsonify(results)
