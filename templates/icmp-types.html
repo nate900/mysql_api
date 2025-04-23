@@ -1,0 +1,148 @@
+{%extends "base.html"%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} ICMP Types {%endblock%}</title>
+</head>
+<body>
+{%block content%}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+</style>
+<h1>ICMP Types and Codes</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>Echo Reply</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Destination Unreachable (Net Unreachable)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>Destination Unreachable (Host Unreachable)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>Destination Unreachable (Protocol Unreachable)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>Destination Unreachable (Port Unreachable)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>Destination Unreachable (Fragmentation Needed and Don't Fragment was Set)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>5</td>
+            <td>Destination Unreachable (Source Route Failed)</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Source Quench</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Redirect (Net)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>1</td>
+            <td>Redirect (Host)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2</td>
+            <td>Redirect (TOS and Net)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>3</td>
+            <td>Redirect (TOS and Host)</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Echo Request</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>0</td>
+            <td>Time Exceeded (TTL Expired)</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>1</td>
+            <td>Time Exceeded (Fragment Reassembly Time Exceeded)</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>0</td>
+            <td>Parameter Problem (Pointer indicates the error)</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>0</td>
+            <td>Timestamp Request</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>0</td>
+            <td>Timestamp Reply</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>0</td>
+            <td>Information Request</td>
+        </tr>
+</tbody>
+</table>
+{%endblock%}
+</body>
+</html>

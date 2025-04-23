@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{%block content%}
+<div>
+    <h2>Control Plane</h2>
+    <p>This is the plane in charge of making sure layer 2 and layer 3 have reachability. This includes routing protocols (BGP, OSPF, RIP, IS-IS), as well as layer 2 protocols like ARP. This plane answers the question "How to forward?"</p>
+    <h2>Data Plane</h2>
+    <p>The data plane (also the user plane) is in charge of actually sending user data acrosss a network. It uses the control plane to send the data, but the protocols on the data plane consist of SMB, HTTP, or FTP.</p>
+    <p>The control plane and data plane are often located on the same router, or device. However, SDN sometimes takes the control plane and abstracts it to another device like a controller, which tells the routing device how to route. The router just handles the data plane. This is a simple example, but there could be more complex examples out there.</p>
+    <h2>Management Plane</h2>
+    <h2>Services Plane</h2>
+</div>
+{%endblock%}
