@@ -3,7 +3,7 @@ from connection import get_connection
 
 # get a connection from mysql database
 conn = get_connection()
-cursur = conn.cursor()
+cursor = conn.cursor()
 
 
 host = '127.0.0.1'
@@ -28,8 +28,8 @@ def planes():
 @app.route('/books', methods=['GET'])
 def get_books():
     sql_statement = 'SELECT * FROM books;'
-    cursur.execute(sql_statement)
-    results = cursur.fetchall()
+    cursor.execute(sql_statement)
+    results = cursor.fetchall()
     return jsonify(results)
 
 
@@ -49,7 +49,7 @@ def insert_book():
     data = (new_book["book_name"], new_book["year_of_book"], new_book["book_desc"])
 
     # Assuming you have a cursor object named 'cursor'
-    cursur.execute(sql_statement, data)
+    cursor.execute(sql_statement, data)
     results = conn.commit()
     return jsonify(results)
 
@@ -57,7 +57,7 @@ def insert_book():
 def delete_book(id):
     sql_statement = "DELETE FROM books WHERE id = (%s)"
     data = (id,)
-    cursur.execute(sql_statement, data)
+    cursor.execute(sql_statement, data)
     results = conn.commit()
     return jsonify(results)
 
